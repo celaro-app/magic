@@ -1,62 +1,32 @@
-# Magic
+<img width="1600" height="900" alt="magic-launch-image" src="https://github.com/user-attachments/assets/7627b17a-a3d6-4910-bc15-436b617f7a35" />
 
-- Preview any block in the browser at `/block/[block-name]`.
-- Drive both the preview and the test email with a single `email-content.json` file at the project root.
-- Run `npm run send` to deliver the current JSON content as an email to a test address.
+### Features
+- Highly modular using block based components with content based props.
+- Uses React Email and TailwindCSS
 
+---
 
-## Requirements
-- Node.js 22.x
-- Resend account (if you want to send test emails)
+### Quickstart
 
-## Setup
+All blocks are available in the `/blocks`.
 
+If you want to preview each block, you can setup the local project by using:
 ```bash
 npm install
 cp .env.example .env
 cp email-content.example.json email-content.json
-```
-
-## Project layout
-
-```
-.
-├── app/                    Next.js App Router (preview UI)
-│   ├── page.tsx            Landing page with links to every block
-│   └── block/[blockName]/  Dynamic preview route (iframe with rendered email HTML)
-├── blocks/                 React Email blocks (hero, cards, cta, footer)
-├── lib/
-│   ├── block-registry.tsx  Slug -> component + default props
-│   ├── load-email-content.ts  Reads email-content.json
-│   └── render-block.tsx    Wraps a block in Html/Head/Body/Tailwind and renders to HTML
-├── scripts/send.ts         CLI that renders + sends via Resend
-├── email-content.example.json  Template for the working JSON
-└── .env.example            Required environment variables
-```
-
-
-
-Open `.env` and set `RESEND_API_KEY` from your Resend dashboard (https://resend.com/api-keys).
-
-## Previewing blocks
-
-```bash
 npm run dev
 ```
 
-Then visit:
+Then you can access the project at http://localhost:3000
 
-- http://localhost:3000 — index of all blocks
-- http://localhost:3000/block/hero
-- http://localhost:3000/block/cards
-- http://localhost:3000/block/cta
-- http://localhost:3000/block/footer
+---
 
-Each preview renders the block exactly the way it will be emailed (React Email + Tailwind, inside an iframe). If `email-content.json` has a `block` value matching the slug, its `content` is used as props; otherwise sensible defaults are shown.
+### Sending a test email
 
-## Sending a test email
+Open `.env` and set `RESEND_API_KEY` from your Resend dashboard (https://resend.com/api-keys).
 
-Edit `email-content.json` so it targets the block you want to test and includes valid `send` info:
+Edit `email-content.json` so it targets the blocks you want to test and includes valid `send` info:
 
 ```json
 {
@@ -79,18 +49,13 @@ Edit `email-content.json` so it targets the block you want to test and includes 
 }
 ```
 
-The `content` object must match the props of the chosen block. The block interfaces live in [`blocks/hero/index.tsx`](./blocks/hero/index.tsx), [`blocks/cards/index.tsx`](./blocks/cards/index.tsx), [`blocks/cta/index.tsx`](./blocks/cta/index.tsx), and [`blocks/footer/index.tsx`](./blocks/footer/index.tsx).
-
 Then send:
 
 ```bash
 npm run send
 ```
 
-The script reads `email-content.json`, renders the chosen block to HTML, and sends it via Resend.
-
-
-## Scripts
+### Scripts
 
 | Command | Description |
 |---|---|
