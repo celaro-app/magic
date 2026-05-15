@@ -24,36 +24,9 @@ Then you can access the project at http://localhost:3000
 
 ### Sending a test email
 
-Open `.env` and set `RESEND_API_KEY` from your Resend dashboard (https://resend.com/api-keys).
-
-Edit `email-content.json` so it targets the blocks you want to test and includes valid `send` info:
-
-```json
-{
-  "send": {
-    "to": "you@example.com",
-    "from": "Magic <noreply@yourdomain.com>",
-    "subject": "Hero block test"
-  },
-  "block": "hero",
-  "content": {
-    "label": "New release",
-    "heroImage": "https://...",
-    "headlineLine1": "Build emails",
-    "headlineLine2": "that feel native.",
-    "descriptionParagraph1": "...",
-    "descriptionParagraph2": "...",
-    "ctaLabel": "Read more",
-    "ctaUrl": "https://example.com"
-  }
-}
-```
-
-Then send:
-
-```bash
-npm run send
-```
+1. Open `.env` and set `RESEND_API_KEY` from your Resend dashboard (https://resend.com/api-keys).
+2. Edit `email-content.json` so it targets the blocks you want to test
+3. Then send: `npm run send`
 
 ### Scripts
 
