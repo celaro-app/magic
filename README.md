@@ -1,5 +1,7 @@
 <img width="1600" height="900" alt="magic-launch-image" src="https://github.com/user-attachments/assets/7627b17a-a3d6-4910-bc15-436b617f7a35" />
 
+---
+
 ### Features
 - Highly modular using block based components with content based props.
 - Uses React Email and TailwindCSS
@@ -27,6 +29,8 @@ Then you can access the project at http://localhost:3000
 1. Open `.env` and set `RESEND_API_KEY` from your Resend dashboard (https://resend.com/api-keys).
 2. Edit `email-content.json` so it targets the blocks you want to test
 3. Then send: `npm run send`
+
+---
 
 ### Scripts
 
