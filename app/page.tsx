@@ -13,7 +13,7 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 sm:px-10">
           <div className="mb-4 flex flex-wrap items-center justify-center gap-3">
             <span className="inline-block max-w-xl bg-linear-to-r from-white to-white/45 bg-clip-text text-base leading-normal text-transparent">
-              Modular Email Theme 
+              Highly Modular Email Theme
             </span>
           </div>
           <h1 className="mb-8 inline-block bg-linear-to-b from-white/0 to-white bg-clip-text py-[0.1em] text-[10rem] leading-none tracking-[-0.055em] text-transparent">
