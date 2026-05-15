@@ -1,0 +1,33 @@
+{
+  "name": "magic",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "send": "tsx scripts/send.ts"
+  },
+  "dependencies": {
+    "@react-email/components": "^0.0.36",
+    "@react-email/render": "^1.0.5",
+    "@react-email/tailwind": "^1.0.4",
+    "lucide-react": "^1.14.0",
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^4.1.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "25.7.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "^19.0.3",
+    "dotenv": "^16.4.7",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0",
+    "tsx": "^4.19.2",
+    "typescript": "6.0.3"
+  },
+  "packageManager": "yarn@4.13.0+sha512.5c20ba010c99815433e5c8453112165e673f1c7948d8d2b267f4b5e52097538658388ebc9f9580656d9b75c5cc996f990f611f99304a2197d4c56d21eea370e7"
+}

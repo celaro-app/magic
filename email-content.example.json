@@ -1,0 +1,64 @@
+{
+  "send": {
+    "to": "you@example.com",
+    "from": "Magic <noreply@yourdomain.com>",
+    "subject": "Magic — full template test"
+  },
+  "block": "hero",
+  "blocks": ["hero", "text", "cards", "cta", "footer"],
+  "contentByBlock": {
+    "hero": {
+      "label": "New release",
+      "image": "https://celaro.co/magic-assets/magic-gradient.png",
+      "headline": "Build emails\nthat feel native.",
+      "description": "A focused starter for shipping polished transactional and marketing emails.\n\nEdit this JSON in the project root to drive both preview and the send command.",
+      "link": { "label": "Read more", "url": "https://example.com" }
+    },
+    "cards": {
+      "card1Image": "https://celaro.co/magic-assets/magic-gradient.png",
+      "card1Title": "Block-based templates",
+      "card1Description": "Register sections once.",
+      "card1Link": { "label": "See blocks", "url": "https://example.com" },
+      "card2Image": "https://celaro.co/magic-assets/magic-gradient.png",
+      "card2Title": "Fast local preview",
+      "card2Description": "Iterate on subject lines.",
+      "card2Link": { "label": "Try it", "url": "https://example.com" }
+    },
+    "text": {
+      "nodes": [
+        { "type": "h2", "text": "Compose from data" },
+        {
+          "type": "p",
+          "text": "Keep structure in components and feed them from email-content.json (or your CMS) without touching layout code."
+        },
+        { "type": "h3", "text": "Stack sends" },
+        {
+          "type": "p",
+          "text": "Combine multiple blocks in one email to mirror long-form campaigns or onboarding sequences."
+        },
+        { "type": "h4", "text": "Tip" },
+        {
+          "type": "p",
+          "text": "Use h2–h4 for hierarchy and p for body copy — order is up to your content."
+        }
+      ]
+    },
+    "cta": {
+      "label": "Get started",
+      "headline": "Ship the next send today.",
+      "link": { "label": "Clone & customize", "url": "https://example.com" },
+      "bottomImage": "https://celaro.co/magic-assets/magic-gradient.png"
+    },
+    "footer": {
+      "tagline": "Better email starts with a system you can evolve.",
+      "siteUrl": "https://example.com",
+      "companyDisplayName": "Magic",
+      "instagramUrl": "https://instagram.com/example",
+      "xUrl": "https://x.com/example",
+      "linkedinUrl": "https://linkedin.com/company/example",
+      "facebookUrl": "https://facebook.com/example",
+      "addressLine1": "Example Street 1",
+      "addressLine2": "123 45 Example City"
+    }
+  }
+}
