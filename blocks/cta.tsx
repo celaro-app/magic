@@ -27,7 +27,7 @@ export const Cta = ({
 }: CtaProps) => {
   return (
     <Section className="overflow-hidden border border-solid border-neutral-800 border-b bg-neutral-900">
-      <Section className="px-10 pb-8 pt-10 text-left">
+      <Section className="px-10 pb-6 pt-10 text-left">
         <Section className="pb-7 text-left">
           {label ? (
             <Row className="pb-4">
